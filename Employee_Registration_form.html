@@ -7,6 +7,8 @@
         function checkdata() {
             var userid = document.getElementById("name");
             var emailid = document.getElementById("email");
+            var bday = document.getElementById("birthday");
+            var Experience = document.getElementById("exp");
 
             if (userid.value ==""){
                 alert("please Enter name !!");
@@ -18,6 +20,16 @@
                 emailid.focus();
                 return false;
             }
+            if(bday.value == ""){
+                alert("Enter Birth date !!");
+                bday.focus();
+                return false;
+            }
+            if(Experience.value == ""){
+                alert("Enter Experience !!!");
+                Experience.focus();
+                return false;
+            }
             alert("Registration successful !!");
             return true;
         }
@@ -25,7 +37,7 @@
 </head>
 
 <body style="font-size: 20px; background-color: aqua;">
-    <h1 style="color:red">Enter User Details:</h1> <br>
+    <h1 style="color:red; text-align: center;">Enter Employee Details:</h1> <br>
     <form onsubmit="return checkdata()">
         <fieldset name="User Registration" style="margin-left:500px ; margin-right: 500px;">
             <legend style="color: red;"> Employee Details:</legend>
@@ -35,6 +47,14 @@
             <br>
             <label for="email" style=" color: red;">Email:</label>
             <input type="email" id="email" name="email">
+            <br>
+            <br>
+            <label for="birthday" style="color: red;">Birthday:</label>
+            <input type="date" id ="birthday" name="birthday">
+            <br>
+            <br>
+            <label for="exp" style="color: red;">Experience:</label>
+            <input type="number" id ="exp" name = "exp">
             <br>
             <br>
             <input type="submit" value="Submit">
