@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Interest Calculator</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Div with id "maindiv" -->
+        <div class="maindiv">
+            <h1> Simple Interest Calculator</h1>
+            Amount :<input type="number" id="principal" onchange="validateAmount()"> 
+            <br>
+            <br>
+            <!-- Rate with updateRate() to display the range -->
+            Rate<input type="range" id="rate" min="1" max="20" value="10.25" onchange="updateRate()">
+            <span id="rate_val">
+                10.25%
+            </span>
+            <br>
+            <br> 
+              <!--No of years with id "years"  -->
+            No. of years <select id="years"> 
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <br>
+            <!-- button with compute function with name "Compute Interest" -->
+            <button onclick="compute()">Compute Interest</button>
+            <br>
+            <br>
+            <!-- Span to display the result__refer script.js file___with id "result" -->
+            <span id="result">
+            </span>
+            <br>
+            <br>
+            <!-- Footer for copy rights -->
+            <footer>
+                &#169; This Calculator belongs to Joshuva Kirubhakar V
+            </footer>
+        </div>
+    </body>
+</html>
